@@ -1,0 +1,21 @@
+OPENQASM 2.0;
+include "qelib1.inc";
+// Boh
+qreg q[3];
+creg c[3];
+// Un po' così
+s q[0];
+h q[1];
+h q[2];
+s q[0];
+x q[1];
+rx(pi/2) q[2];
+ry(pi/2) q[0];
+y q[1];
+h q[2];
+ry(pi/2) q[0];
+h q[1];
+tdg q[0];
+tdg q[0];
+s q[0];
+y q[1];

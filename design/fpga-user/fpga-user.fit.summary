@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Aug 22 11:49:39 2024
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : fpga-user
+Top-level Entity Name : user
+Family : Cyclone 10 LP
+Device : 10CL025YE144C8G
+Timing Models : Final
+Total logic elements : 4,173 / 24,624 ( 17 % )
+    Total combinational functions : 4,104 / 24,624 ( 17 % )
+    Dedicated logic registers : 1,279 / 24,624 ( 5 % )
+Total registers : 1279
+Total pins : 51 / 77 ( 66 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 56 / 132 ( 42 % )
+Total PLLs : 1 / 2 ( 50 % )

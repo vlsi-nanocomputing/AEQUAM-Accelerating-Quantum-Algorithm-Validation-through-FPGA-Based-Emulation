@@ -1,0 +1,44 @@
+// Probability distribution of eigenstates is
+//  0.0949    0.0720    0.0515    0.1607    0.0668    0.0508    0.0321    0.0513    0.0269    0.0206    0.0157  0.0107    0.0216    0.0152    0.0093    0.2998
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[4];
+creg c[4];
+rx(pi/2) q[0];
+ry(pi/8) q[0];
+rx(pi/2) q[0];
+ry(-pi/2) q[1];
+rx(pi/8) q[1];
+cz q[0],q[1];
+rx(-pi/8) q[1];
+cz q[0],q[1];
+ry(pi/2) q[1];
+rx(pi) q[1];
+ry(-pi/2) q[2];
+rx(pi/8) q[2];
+cz q[1],q[2];
+rx(-pi/8) q[2];
+cz q[0],q[2];
+rx(pi/8) q[2];
+cz q[1],q[2];
+rx(-pi/8) q[2];
+cz q[0],q[2];
+ry(pi/2) q[2];
+rx(pi) q[2];
+rx(pi/8) q[3];
+cz q[2],q[3];
+rx(-pi/8) q[3];
+cz q[1],q[3];
+rx(pi/8) q[3];
+cz q[2],q[3];
+rx(-pi/8) q[3];
+cz q[0],q[3];
+rx(pi/8) q[3];
+cz q[2],q[3];
+rx(-pi/8) q[3];
+cz q[1],q[3];
+rx(pi/8) q[3];
+cz q[2],q[3];
+rx(-pi/8) q[3];
+cz q[0],q[3];

@@ -1,0 +1,3399 @@
+Start executions of all files
+
+
+\execution of 0410184_169.qasm:
+
+
+16
+211
+Well done
+
+The time employed by VLSIEmulator is: 0.2153174877166748
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/0410184_169.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.3967099189758301
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800708057356e-08
+
+
+\execution of 4gt10-v1_81.qasm:
+
+
+16
+148
+Well done
+
+The time employed by VLSIEmulator is: 0.21595478057861328
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt10-v1_81.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.4557783603668213
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 8.881784197001248e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800689584434e-08
+
+
+\execution of 4gt11_84.qasm:
+
+
+16
+18
+Well done
+
+The time employed by VLSIEmulator is: 0.2342381477355957
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt11_84.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.08352923393249512
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680012678861e-08
+
+
+\execution of 4gt12-v1_89.qasm:
+
+
+16
+228
+Well done
+
+The time employed by VLSIEmulator is: 0.25876355171203613
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt12-v1_89.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.6495521068572998
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 8.881784197001248e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680183781075e-08
+
+
+\execution of 4gt13-v1_93.qasm:
+
+
+16
+68
+Well done
+
+The time employed by VLSIEmulator is: 0.21715998649597168
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt13-v1_93.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.2631814479827881
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.661338147750936e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 3.563102722614036e-16
+
+The average complex distance is equal to: 3.563102722614036e-16
+
+
+\execution of 4gt4-v1_74.qasm:
+
+
+16
+273
+Well done
+
+The time employed by VLSIEmulator is: 0.27308082580566406
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt4-v1_74.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.7819337844848633
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 7.397138618702095e-16
+
+The average complex distance is equal to: 7.397138618702095e-16
+
+
+\execution of 4gt5_77.qasm:
+
+
+16
+131
+Well done
+
+The time employed by VLSIEmulator is: 0.2308492660522461
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4gt5_77.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.44133591651916504
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800251311965e-08
+
+
+\execution of 4mod5-bdd_287.qasm:
+
+
+16
+70
+Well done
+
+The time employed by VLSIEmulator is: 0.21617984771728516
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4mod5-bdd_287.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.1546328067779541
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.661338147750936e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 5.762850561179823e-16
+
+The average complex distance is equal to: 5.762850561179823e-16
+
+
+\execution of 4mod5-v1_24.qasm:
+
+
+16
+36
+Well done
+
+The time employed by VLSIEmulator is: 0.19854736328125
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4mod5-v1_24.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.12157583236694336
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.7973943866182304e-15
+
+The average complex distance is equal to: 1.7973943866182304e-15
+
+
+\execution of 4mod7-v1_96.qasm:
+
+
+16
+164
+Well done
+
+The time employed by VLSIEmulator is: 0.19771218299865723
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/4mod7-v1_96.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.62255859375
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680034075248e-08
+
+
+\execution of 9symml_195.qasm:
+
+
+16
+34881
+Well done
+
+The time employed by VLSIEmulator is: 5.931651592254639
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/9symml_195.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 78.79928803443909
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.17284001691568e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2147080082786055e-08
+
+
+\execution of adder.qasm:
+
+
+10
+142
+Well done
+
+The time employed by VLSIEmulator is: 0.01201319694519043
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/adder.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.10153841972351074
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 2.7465400791133423e-15
+
+The average complex distance is equal to: 2.7465400791133423e-15
+
+
+\execution of adder1001.qasm:
+
+
+4
+53
+Well done
+
+The time employed by VLSIEmulator is: 0.008996725082397461
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/adder1001.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.05328059196472168
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.209530440755322e-06
+
+The Helinger fidelity is equal to: 0.9999999999987679
+
+The maximum complex distance is equal to: 1.104764610067862e-06
+
+The average complex distance is equal to: 1.2122184140496663e-06
+
+
+\execution of adder_large.qasm:
+
+
+18
+282
+Too large problem to be simulated in software
+
+
+\execution of adder_medium.qasm:
+
+
+10
+142
+Well done
+
+The time employed by VLSIEmulator is: 0.004012584686279297
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/adder_medium.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.12522315979003906
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 2.7465400791133423e-15
+
+The average complex distance is equal to: 2.7465400791133423e-15
+
+
+\execution of adder_small.qasm:
+
+
+4
+23
+Well done
+
+The time employed by VLSIEmulator is: 0.0029554367065429688
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/adder_small.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.020007848739624023
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.661338147750936e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.4388202615426409e-15
+
+The average complex distance is equal to: 1.4388202615426409e-15
+
+
+\execution of adr4_197.qasm:
+
+
+16
+3439
+Well done
+
+The time employed by VLSIEmulator is: 1.1434824466705322
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/adr4_197.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 7.559023857116699
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 3.1086244689519194e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680073372e-08
+
+The average complex distance is equal to: 4.214681303485508e-08
+
+
+\execution of aj-e11_165.qasm:
+
+
+16
+151
+Well done
+
+The time employed by VLSIEmulator is: 0.2714872360229492
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/aj-e11_165.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.8683013916015625
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.661338147750936e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800448976844e-08
+
+
+\execution of alu-bdd_288.qasm:
+
+
+16
+84
+Well done
+
+The time employed by VLSIEmulator is: 0.30832815170288086
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/alu-bdd_288.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.25980401039123535
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680040837112e-08
+
+
+\execution of bell.qasm:
+
+
+3
+19
+Well done
+
+The time employed by VLSIEmulator is: 0.0034558773040771484
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/bell.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03552532196044922
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 3.510833468576701e-16
+
+The average complex distance is equal to: 3.510833468576701e-16
+
+
+\execution of C17_204.qasm:
+
+
+16
+467
+Well done
+
+The time employed by VLSIEmulator is: 0.3562326431274414
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/C17_204.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 1.6040754318237305
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 8.881784197001248e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800866656486e-08
+
+
+\execution of clip_206.qasm:
+
+
+16
+33827
+Well done
+
+The time employed by VLSIEmulator is: 7.90749192237854
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/clip_206.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 74.62317848205566
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 5.1292303737684397e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680225661925e-08
+
+The average complex distance is equal to: 4.214699053541847e-08
+
+
+\execution of cm152a_212.qasm:
+
+
+16
+1221
+Well done
+
+The time employed by VLSIEmulator is: 0.6079013347625732
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cm152a_212.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 2.6959939002990723
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.66453525910092e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680054953256e-08
+
+The average complex distance is equal to: 4.214680340022755e-08
+
+
+\execution of cm42a_207.qasm:
+
+
+16
+1776
+Well done
+
+The time employed by VLSIEmulator is: 0.7468681335449219
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cm42a_207.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 3.545401096343994
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500617e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 4.6791462999516225e-15
+
+The average complex distance is equal to: 1.2218734687642334e-14
+
+
+\execution of cm85a_209.qasm:
+
+
+16
+11414
+Well done
+
+The time employed by VLSIEmulator is: 2.8585119247436523
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cm85a_209.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 26.472607612609863
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.6875389974303222e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214679988862992e-08
+
+The average complex distance is equal to: 4.2146867791508456e-08
+
+
+\execution of cnt3-5_180.qasm:
+
+
+16
+485
+Well done
+
+The time employed by VLSIEmulator is: 0.41454076766967773
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cnt3-5_180.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 1.086503267288208
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.2204460492503103e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680614850471e-08
+
+
+\execution of co14_215.qasm:
+
+
+16
+17936
+Well done
+
+The time employed by VLSIEmulator is: 4.715099573135376
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/co14_215.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 41.250213861465454
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 3.8635761256954697e-14
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 8.72472510709812e-14
+
+The average complex distance is equal to: 1.7890111796363077e-13
+
+
+\execution of con1_216.qasm:
+
+
+16
+954
+Well done
+
+The time employed by VLSIEmulator is: 0.5055830478668213
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/con1_216.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 2.3393149375915527
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.7763568394004418e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214679997224449e-08
+
+The average complex distance is equal to: 4.214680424905969e-08
+
+
+\execution of cx11.qasm:
+
+
+2
+6
+Well done
+
+The time employed by VLSIEmulator is: 0.006000995635986328
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cx11.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.025112390518188477
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.1102230246251565e-16
+
+The average complex distance is equal to: 1.1102230246251565e-16
+
+
+\execution of cxion.qasm:
+
+
+2
+14
+Well done
+
+The time employed by VLSIEmulator is: 0.0070362091064453125
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cxion.qasm
+
+Problems
+
+Qiskit cannot simulate the file
+
+
+\execution of cxtest.qasm:
+
+
+2
+12
+Well done
+
+The time employed by VLSIEmulator is: 0.004050254821777344
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cxtest.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.026648283004760742
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.563718273652995e-07
+
+The Helinger fidelity is equal to: 0.9999999999998299
+
+The maximum complex distance is equal to: 5.376589952489579e-07
+
+The average complex distance is equal to: 1.0088132385109512e-06
+
+
+\execution of cycle10_2_110.qasm:
+
+
+16
+6050
+Well done
+
+The time employed by VLSIEmulator is: 1.4537525177001953
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/cycle10_2_110.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 12.97596287727356
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.439293542825887e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.21468167455623e-08
+
+
+\execution of czcustom.qasm:
+
+
+10
+21
+Well done
+
+The time employed by VLSIEmulator is: 0.010280132293701172
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/czcustom.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03106689453125
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.925486887160678e-07
+
+The Helinger fidelity is equal to: 0.9999999999999651
+
+The maximum complex distance is equal to: 3.5312052426599076e-07
+
+The average complex distance is equal to: 9.150954309217733e-07
+
+
+\execution of dc1_220.qasm:
+
+
+16
+1914
+Well done
+
+The time employed by VLSIEmulator is: 0.5894207954406738
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/dc1_220.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 4.199060916900635
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.6629367034256464e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 4.857347316119982e-15
+
+The average complex distance is equal to: 1.515318401202118e-14
+
+
+\execution of dc2_222.qasm:
+
+
+16
+9462
+Well done
+
+The time employed by VLSIEmulator is: 2.4853484630584717
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/dc2_222.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 19.508692026138306
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.953992523340287e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.2146801001751095e-08
+
+The average complex distance is equal to: 4.2146839178329776e-08
+
+
+\execution of decod24-bdd_294.qasm:
+
+
+16
+73
+Well done
+
+The time employed by VLSIEmulator is: 0.30971622467041016
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/decod24-bdd_294.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.3849978446960449
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.110223024625156e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680200809154e-08
+
+
+\execution of decod24-enable_126.qasm:
+
+
+16
+338
+Well done
+
+The time employed by VLSIEmulator is: 0.39865708351135254
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/decod24-enable_126.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 1.5023176670074463
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 8.881784197001248e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800497779574e-08
+
+
+\execution of decod24-v3_45.qasm:
+
+
+16
+150
+Well done
+
+The time employed by VLSIEmulator is: 0.3235626220703125
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/decod24-v3_45.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.5943751335144043
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 3.403608478210362e-16
+
+The average complex distance is equal to: 3.403608478210362e-16
+
+
+\execution of dist_223.qasm:
+
+
+16
+38046
+Well done
+
+The time employed by VLSIEmulator is: 8.502098560333252
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/dist_223.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 82.6475293636322
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.39488462184163e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680188738287e-08
+
+The average complex distance is equal to: 4.214703249007473e-08
+
+
+\execution of ex1_226.qasm:
+
+
+16
+7
+Well done
+
+The time employed by VLSIEmulator is: 0.26819825172424316
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ex1_226.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.04255056381225586
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 0.0
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 0
+
+The average complex distance is equal to: 0.0
+
+
+\execution of ex2_227.qasm:
+
+
+16
+631
+Well done
+
+The time employed by VLSIEmulator is: 0.4692223072052002
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ex2_227.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 2.0307202339172363
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.776356839400403e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.2146800000000056e-08
+
+The average complex distance is equal to: 4.214680091459853e-08
+
+
+\execution of ex3_229.qasm:
+
+
+16
+403
+Well done
+
+The time employed by VLSIEmulator is: 0.3713803291320801
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ex3_229.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 1.4329655170440674
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550278e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.2146800274766215e-08
+
+The average complex distance is equal to: 4.214680120221341e-08
+
+
+\execution of example0_dictionary.qasm:
+
+
+2
+20
+Well done
+
+The time employed by VLSIEmulator is: 0.014996767044067383
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example0_dictionary.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.018083572387695312
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.649897383591997e-07
+
+The Helinger fidelity is equal to: 0.9999999999998894
+
+The maximum complex distance is equal to: 3.350152412735887e-07
+
+The average complex distance is equal to: 3.4570020068286215e-07
+
+
+\execution of example0_toffoli.qasm:
+
+
+3
+18
+Well done
+
+The time employed by VLSIEmulator is: 0.004034996032714844
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example0_toffoli.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.01999640464782715
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.2095304406443e-06
+
+The Helinger fidelity is equal to: 0.9999999999987794
+
+The maximum complex distance is equal to: 3.905932737247042e-07
+
+The average complex distance is equal to: 3.124746189575589e-06
+
+
+\execution of example0_z.qasm:
+
+
+4
+18
+Well done
+
+The time employed by VLSIEmulator is: 0.006479740142822266
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example0_z.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.011002063751220703
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.3148708643871954e-06
+
+The Helinger fidelity is equal to: 0.9999999999995677
+
+The maximum complex distance is equal to: 6.859357413170577e-07
+
+The average complex distance is equal to: 6.859357413170577e-07
+
+
+\execution of example1_finalz.qasm:
+
+
+3
+15
+Well done
+
+The time employed by VLSIEmulator is: 0.014496326446533203
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example1_finalz.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.015009641647338867
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 5.551115123125781e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.6653345369377348e-16
+
+The average complex distance is equal to: 9.603741735056832e-16
+
+
+\execution of example2_null.qasm:
+
+
+3
+28
+Well done
+
+The time employed by VLSIEmulator is: 0.009656190872192383
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example2_null.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.02018284797668457
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.1047652202111277e-06
+
+The Helinger fidelity is equal to: 0.9999999999993898
+
+The maximum complex distance is equal to: 5.523823050731834e-07
+
+The average complex distance is equal to: 1.1047646105362897e-06
+
+
+\execution of example2_tetris.qasm:
+
+
+2
+17
+Well done
+
+The time employed by VLSIEmulator is: 0.008258819580078125
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example2_tetris.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.0310056209564209
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.1594501073398255e-15
+
+The average complex distance is equal to: 4.19623346888314e-15
+
+
+\execution of example2_thetas.qasm:
+
+
+2
+24
+Well done
+
+The time employed by VLSIEmulator is: 0.011011600494384766
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example2_thetas.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03586840629577637
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.828993022581115e-07
+
+The Helinger fidelity is equal to: 0.9999999999998488
+
+The maximum complex distance is equal to: 5.265178803792274e-07
+
+The average complex distance is equal to: 1.657411967410556e-06
+
+
+\execution of example3_finalcombo.qasm:
+
+
+4
+18
+Well done
+
+The time employed by VLSIEmulator is: 0.005968332290649414
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_finalcombo.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.012000083923339844
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 3.461199404338453e-07
+
+The Helinger fidelity is equal to: 0.99999999999997
+
+The maximum complex distance is equal to: 5.070354823243027e-07
+
+The average complex distance is equal to: 2.028141929075037e-06
+
+
+\execution of example3_initial.qasm:
+
+
+4
+9
+Well done
+
+The time employed by VLSIEmulator is: 0.005912303924560547
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_initial.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.007999181747436523
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 0.0
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 2.1632341619892146e-16
+
+The average complex distance is equal to: 2.1632341619892146e-16
+
+
+\execution of example3_initial_cz.qasm:
+
+
+4
+9
+Well done
+
+The time employed by VLSIEmulator is: 0.0029993057250976562
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_initial_cz.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.01752471923828125
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.661338147750936e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 3.4603905440509053e-16
+
+The average complex distance is equal to: 3.4603905440509053e-16
+
+
+\execution of example3_simplecombo.qasm:
+
+
+3
+15
+Well done
+
+The time employed by VLSIEmulator is: 0.006531715393066406
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_simplecombo.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.013055801391601562
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978086722657e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 3.094489521888904e-07
+
+The average complex distance is equal to: 3.094489521888904e-07
+
+
+\execution of example3_templ1.qasm:
+
+
+4
+36
+Well done
+
+The time employed by VLSIEmulator is: 0.003000020980834961
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_templ1.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03612518310546875
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978095604441e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 3.094489525814135e-07
+
+The average complex distance is equal to: 3.094489525814135e-07
+
+
+\execution of example3_tetris.qasm:
+
+
+2
+21
+Well done
+
+The time employed by VLSIEmulator is: 0.0019989013671875
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example3_tetris.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.021028518676757812
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.775557561562891e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 6.045159893340944e-16
+
+The average complex distance is equal to: 2.021437717213544e-15
+
+
+\execution of example4_seconditeration.qasm:
+
+
+4
+16
+Well done
+
+The time employed by VLSIEmulator is: 0.004002571105957031
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example4_seconditeration.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.020043611526489258
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.4751338523179328e-06
+
+The Helinger fidelity is equal to: 0.9999999999993661
+
+The maximum complex distance is equal to: 3.0470336326304803e-07
+
+The average complex distance is equal to: 2.475253810030331e-06
+
+
+\execution of example4_templ2.qasm:
+
+
+4
+36
+Well done
+
+The time employed by VLSIEmulator is: 0.0030639171600341797
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example4_templ2.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.034024953842163086
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978095604441e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 3.094489525814135e-07
+
+The average complex distance is equal to: 3.094489525814135e-07
+
+
+\execution of example5_seconditeration.qasm:
+
+
+4
+16
+Well done
+
+The time employed by VLSIEmulator is: 0.003000497817993164
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example5_seconditeration.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03588461875915527
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.4751338530557874e-06
+
+The Helinger fidelity is equal to: 0.9999999999993661
+
+The maximum complex distance is equal to: 3.0470336326304803e-07
+
+The average complex distance is equal to: 2.475253811029532e-06
+
+
+\execution of example5_templ3.qasm:
+
+
+6
+25
+Well done
+
+The time employed by VLSIEmulator is: 0.0009920597076416016
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example5_templ3.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.026258230209350586
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978090053326e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 2.1881345269036956e-07
+
+The average complex distance is equal to: 4.376269052697168e-07
+
+
+\execution of example6_mixed.qasm:
+
+
+4
+23
+Well done
+
+The time employed by VLSIEmulator is: 0.0030012130737304688
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example6_mixed.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.016950130462646484
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.2204460492503126e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.4409059796375077e-16
+
+The average complex distance is equal to: 3.817216857769786e-16
+
+
+\execution of example7_mixed.qasm:
+
+
+4
+47
+Well done
+
+The time employed by VLSIEmulator is: 0.0019998550415039062
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example7_mixed.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.049070119857788086
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.7236610289405458e-06
+
+The Helinger fidelity is equal to: 0.9999999999985145
+
+The maximum complex distance is equal to: 4.3091562868991534e-07
+
+The average complex distance is equal to: 3.4473250312093153e-06
+
+
+\execution of example8_mixed.qasm:
+
+
+4
+49
+Well done
+
+The time employed by VLSIEmulator is: 0.0010006427764892578
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/example8_mixed.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.05900764465332031
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.4432899320127023e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.2373150882860757e-15
+
+The average complex distance is equal to: 4.2990924385247754e-15
+
+
+\execution of exampleh_mixed.qasm:
+
+
+4
+44
+Well done
+
+The time employed by VLSIEmulator is: 0.00500035285949707
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/exampleh_mixed.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.04900026321411133
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.7390797167922332e-06
+
+The Helinger fidelity is equal to: 0.9999999999992208
+
+The maximum complex distance is equal to: 3.5156799017860063e-07
+
+The average complex distance is equal to: 3.373745805679739e-06
+
+
+\execution of exampleh_real.qasm:
+
+
+4
+44
+Well done
+
+The time employed by VLSIEmulator is: 0.005011081695556641
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/exampleh_real.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.03952169418334961
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.1047652188927376e-06
+
+The Helinger fidelity is equal to: 0.9999999999993898
+
+The maximum complex distance is equal to: 3.905932735026596e-07
+
+The average complex distance is equal to: 1.562373095007056e-06
+
+
+\execution of exampleh_templ3.qasm:
+
+
+2
+32
+Well done
+
+The time employed by VLSIEmulator is: 0.0009975433349609375
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/exampleh_templ3.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.027004718780517578
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 7.948041444017914e-07
+
+The Helinger fidelity is equal to: 0.9999999999997367
+
+The maximum complex distance is equal to: 3.165773471340084e-07
+
+The average complex distance is equal to: 1.2307963305082612e-06
+
+
+\execution of f2_232.qasm:
+
+
+16
+1206
+Well done
+
+The time employed by VLSIEmulator is: 0.6453752517700195
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/f2_232.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 3.551081657409668
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.664535259100372e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 2.8916325397454976e-15
+
+The average complex distance is equal to: 5.909990046467759e-15
+
+
+\execution of fredkin101.qasm:
+
+
+3
+28
+Well done
+
+The time employed by VLSIEmulator is: 0.008000612258911133
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/fredkin101.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.039637088775634766
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.3148708648312846e-06
+
+The Helinger fidelity is equal to: 0.9999999999995637
+
+The maximum complex distance is equal to: 6.859357415619897e-07
+
+The average complex distance is equal to: 7.491560415619897e-07
+
+
+\execution of ghz_n3.qasm:
+
+
+3
+3
+Well done
+
+The time employed by VLSIEmulator is: 0.0030012130737304688
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ghz_n3.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.0049970149993896484
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978088943103e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 2.1881345257934726e-07
+
+The average complex distance is equal to: 4.376269051586945e-07
+
+
+\execution of ghz_n4.qasm:
+
+
+4
+17
+Well done
+
+The time employed by VLSIEmulator is: 0.007126808166503906
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ghz_n4.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.023006677627563477
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.188978086722657e-07
+
+The Helinger fidelity is equal to: 0.9999999999999043
+
+The maximum complex distance is equal to: 2.1881345257934726e-07
+
+The average complex distance is equal to: 4.376269050476722e-07
+
+
+\execution of graycode6_47.qasm:
+
+
+16
+5
+Well done
+
+The time employed by VLSIEmulator is: 0.3114945888519287
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/graycode6_47.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.0675497055053711
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 0.0
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 0
+
+The average complex distance is equal to: 0.0
+
+
+\execution of grover10.qasm:
+
+
+2
+18
+Well done
+
+The time employed by VLSIEmulator is: 0.0039539337158203125
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/grover10.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.025525331497192383
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.3269350471911456e-16
+
+The average complex distance is equal to: 1.3269350471911456e-16
+
+
+\execution of grover101.qasm:
+
+
+3
+100
+Well done
+
+The time employed by VLSIEmulator is: 0.001993894577026367
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/grover101.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.05163311958312988
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.6791998689589615e-06
+
+The Helinger fidelity is equal to: 0.9999999999992655
+
+The maximum complex distance is equal to: 8.241315025969698e-07
+
+The average complex distance is equal to: 1.3623730949208213e-06
+
+
+\execution of grover101.qasm.bak:
+
+
+3
+99
+Well done
+
+The time employed by VLSIEmulator is: 0.0009932518005371094
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/grover101.qasm.bak
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.05355405807495117
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.6791998689589615e-06
+
+The Helinger fidelity is equal to: 0.9999999999992655
+
+The maximum complex distance is equal to: 8.241315025969698e-07
+
+The average complex distance is equal to: 1.3623730949208213e-06
+
+
+\execution of ham15_107.qasm:
+
+
+16
+8763
+Well done
+
+The time employed by VLSIEmulator is: 2.276506185531616
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ham15_107.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 15.493823766708374
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 9.547918011779882e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680128026448e-08
+
+The average complex distance is equal to: 4.214682195110746e-08
+
+
+\execution of ham3_102.qasm:
+
+
+16
+20
+Well done
+
+The time employed by VLSIEmulator is: 0.20010113716125488
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ham3_102.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.10620307922363281
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680011317718e-08
+
+
+\execution of ham7_104.qasm:
+
+
+16
+320
+Well done
+
+The time employed by VLSIEmulator is: 0.25321030616760254
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ham7_104.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.783907413482666
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.2204460492503103e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146802406948056e-08
+
+
+\execution of hwb4_49.qasm:
+
+
+16
+233
+Well done
+
+The time employed by VLSIEmulator is: 0.25121498107910156
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/hwb4_49.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.8592877388000488
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800249158774e-08
+
+
+\execution of hwb5_53.qasm:
+
+
+16
+1336
+Well done
+
+The time employed by VLSIEmulator is: 0.4866364002227783
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/hwb5_53.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 4.273775339126587
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 3.5527136788004946e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680498530274e-08
+
+
+\execution of hwb6_56.qasm:
+
+
+16
+6723
+Well done
+
+The time employed by VLSIEmulator is: 1.3789610862731934
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/hwb6_56.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 17.883953094482422
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 5.995204332975827e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.21468075917399e-08
+
+
+\execution of hwb7_59.qasm:
+
+
+16
+24379
+Well done
+
+The time employed by VLSIEmulator is: 4.469808340072632
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/hwb7_59.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 64.06431937217712
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 3.5749181392929694e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680188952095e-08
+
+The average complex distance is equal to: 4.214685380790799e-08
+
+
+\execution of hwb8_113.qasm:
+
+
+16
+69380
+Well done
+
+The time employed by VLSIEmulator is: 16.370739698410034
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/hwb8_113.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 54216.06166768074
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 9.503509090791393e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680308921898e-08
+
+The average complex distance is equal to: 4.214698460782659e-08
+
+
+\execution of inc_237.qasm:
+
+
+16
+10619
+Well done
+
+The time employed by VLSIEmulator is: 2.8736138343811035
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/inc_237.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 22.861374855041504
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.176037128265283e-14
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.964005424526996e-14
+
+The average complex distance is equal to: 5.6754114451213414e-14
+
+
+\execution of ising_model_16.qasm:
+
+
+16
+786
+Well done
+
+The time employed by VLSIEmulator is: 0.6900911331176758
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/ising_model_16.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 1.2802119255065918
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.260217433343967e-06
+
+The Helinger fidelity is equal to: 0.9999999999882758
+
+The maximum complex distance is equal to: 1.76037241286896e-07
+
+The average complex distance is equal to: 0.0006263902252993031
+
+
+\execution of life_238.qasm:
+
+
+16
+22445
+Well done
+
+The time employed by VLSIEmulator is: 5.350384950637817
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/life_238.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 57.280229330062866
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.218847493579511e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680522057417e-08
+
+The average complex distance is equal to: 4.214693899374495e-08
+
+
+\execution of linearsolver.qasm:
+
+
+3
+27
+Well done
+
+The time employed by VLSIEmulator is: 0.009819269180297852
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/linearsolver.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.018107891082763672
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 5.580515259816982e-07
+
+The Helinger fidelity is equal to: 0.9999999999998919
+
+The maximum complex distance is equal to: 0.5480239683959367
+
+The average complex distance is equal to: 1.09604828670706
+
+
+\execution of linear_solver.qasm:
+
+
+3
+27
+Well done
+
+The time employed by VLSIEmulator is: 0.0032901763916015625
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/linear_solver.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.01695847511291504
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 5.580515259816982e-07
+
+The Helinger fidelity is equal to: 0.9999999999998919
+
+The maximum complex distance is equal to: 0.5480239683959367
+
+The average complex distance is equal to: 1.09604828670706
+
+
+\execution of majority_239.qasm:
+
+
+16
+612
+Well done
+
+The time employed by VLSIEmulator is: 0.3580355644226074
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/majority_239.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 2.234023332595825
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 1.7322106825268458e-15
+
+The average complex distance is equal to: 2.9325841305409906e-15
+
+
+\execution of max46_240.qasm:
+
+
+16
+27126
+Well done
+
+The time employed by VLSIEmulator is: 6.6380274295806885
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/max46_240.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 74.09254932403564
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.152234112104001e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.2146801766379945e-08
+
+The average complex distance is equal to: 4.214693952369349e-08
+
+
+\execution of mct1111.qasm:
+
+
+4
+37
+Well done
+
+The time employed by VLSIEmulator is: 0.010279178619384766
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mct1111.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.04003119468688965
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 6.756752273173306e-07
+
+The Helinger fidelity is equal to: 0.9999999999998779
+
+The maximum complex distance is equal to: 4.2698988078357475e-07
+
+The average complex distance is equal to: 5.164744573014536e-07
+
+
+\execution of miller_11.qasm:
+
+
+16
+50
+Well done
+
+The time employed by VLSIEmulator is: 0.3018181324005127
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/miller_11.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.2881953716278076
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.220446049250313e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.2146800112143035e-08
+
+
+\execution of mini_alu_305.qasm:
+
+
+16
+173
+Well done
+
+The time employed by VLSIEmulator is: 0.2751321792602539
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mini_alu_305.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.6182665824890137
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680077814676e-08
+
+
+\execution of misex1_241.qasm:
+
+
+16
+4813
+Well done
+
+The time employed by VLSIEmulator is: 1.316892385482788
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/misex1_241.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 11.026110410690308
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 9.99200722162636e-15
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214683798038554e-08
+
+
+\execution of mlp4_245.qasm:
+
+
+16
+18852
+Well done
+
+The time employed by VLSIEmulator is: 4.64508581161499
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mlp4_245.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 41.01947474479675
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 2.6645352591005423e-14
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.214680074940131e-08
+
+The average complex distance is equal to: 4.214687545114398e-08
+
+
+\execution of mod10_176.qasm:
+
+
+16
+178
+Well done
+
+The time employed by VLSIEmulator is: 0.2751884460449219
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mod10_176.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 0.8259985446929932
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 4.440892098500625e-16
+
+The Helinger fidelity is equal to: 0.9999999999999982
+
+The maximum complex distance is equal to: 4.21468e-08
+
+The average complex distance is equal to: 4.214680023841411e-08
+
+
+\execution of mod5adder_127.qasm:
+
+
+16
+555
+Well done
+
+The time employed by VLSIEmulator is: 0.379591703414917
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mod5adder_127.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
+
+The time employed by Qiskit state vector is: 2.0930838584899902
+
+Read qiskit file
+
+Figure of merit evaluation
+
+The divergence is equal to: 1.332267629550187e-15
+
+The Helinger fidelity is equal to: 1.0
+
+The maximum complex distance is equal to: 2.636460878393966e-15
+
+The average complex distance is equal to: 3.659635631371255e-15
+
+
+\execution of mod5d2_64.qasm:
+
+
+16
+53
+Well done
+
+The time employed by VLSIEmulator is: 0.26540637016296387
+
+Qiskit solver execution
+
+Backend chosen
+
+../../file/input/mod5d2_64.qasm
+
+Circuit generated
+
+Circuit executed
+
+Well done
