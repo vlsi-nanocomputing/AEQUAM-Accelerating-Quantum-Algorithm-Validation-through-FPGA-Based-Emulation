@@ -1,0 +1,266 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim
+Econtrol_unit
+w1663944706
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 64
+R0
+8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/control_unit.vhd
+FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/control_unit.vhd
+l0
+L4 1
+V`PfT:i3S0Y37bbOJ^15;L3
+!s100 <Dl@I4GXj_n;2g[DDL]_=0
+Z3 OV;C;2020.1;71
+32
+Z4 !s110 1665487822
+!i10b 1
+Z5 !s108 1665487822.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/control_unit.vhd|
+!s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/control_unit.vhd|
+!i113 1
+Z6 o-work work -2002 -explicit
+Z7 tExplicit 1 CvgOpt 0
+Arom_based
+w1665046098
+R1
+R2
+DEx4 work 12 control_unit 0 22 `PfT:i3S0Y37bbOJ^15;L3
+!i122 64
+8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/arch_control_unit_rom_based.vhd
+FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/arch_control_unit_rom_based.vhd
+l51
+L3 136
+V6Ci7bmha:QhS:P6DHAf6a3
+!s100 A1JKD`b0nEHk^=VUhJU2?1
+R3
+32
+R4
+!i10b 1
+!s108 1665487821.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/arch_control_unit_rom_based.vhd|
+!s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/arch_control_unit_rom_based.vhd|
+!i113 1
+R6
+R7
+Emultiplexer_2_1
+Z8 w1665048847
+R1
+R2
+!i122 68
+R0
+Z9 8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/multiplexers/src/multiplexer_2_1.vhd
+Z10 FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/multiplexers/src/multiplexer_2_1.vhd
+l0
+L3 1
+Vc3O<AJJzzURX1cWF99I=@1
+!s100 ZV>Q6XimFJ07zMZCWU^QN0
+R3
+32
+R4
+!i10b 1
+R5
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/multiplexers/src/multiplexer_2_1.vhd|
+Z12 !s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/multiplexers/src/multiplexer_2_1.vhd|
+!i113 1
+R6
+R7
+Abehavioral
+R1
+R2
+DEx4 work 15 multiplexer_2_1 0 22 c3O<AJJzzURX1cWF99I=@1
+!i122 68
+l14
+L12 11
+V`d]j;_WKj4`;KiXKmd2W^1
+!s100 j6giPY14f<In5NbXF6BbN1
+R3
+32
+R4
+!i10b 1
+R5
+R11
+R12
+!i113 1
+R6
+R7
+En_bit_register
+Z13 w1663763247
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 67
+R0
+Z15 8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/register/src/n_bit_register.vhd
+Z16 FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/register/src/n_bit_register.vhd
+l0
+L5 1
+VM9G33L6D2c=8;YOYe8TYV3
+!s100 Xah=_1[1`gJEHVWXaQTWn1
+R3
+32
+R4
+!i10b 1
+R5
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/register/src/n_bit_register.vhd|
+Z18 !s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/basic_blocks/register/src/n_bit_register.vhd|
+!i113 1
+R6
+R7
+Abeh
+R14
+R1
+R2
+DEx4 work 14 n_bit_register 0 22 M9G33L6D2c=8;YOYe8TYV3
+!i122 67
+l14
+L12 22
+Va2PXiKLaoz?^IRoXU`6YS1
+!s100 _mB1>z0OT>PE3Ij_RRR5S0
+R3
+32
+R4
+!i10b 1
+R5
+R17
+R18
+!i113 1
+R6
+R7
+Enon_rot_rom
+Z19 w1663862430
+R1
+R2
+!i122 65
+R0
+Z20 8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/non_rot_rom.vhd
+Z21 FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/non_rot_rom.vhd
+l0
+L4 1
+VN2XKlLj^Di8=YBM59C?n_1
+!s100 <nW8JCn4m8b<m6Z@h]J9B0
+R3
+32
+R4
+!i10b 1
+R5
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/non_rot_rom.vhd|
+Z23 !s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/non_rot_rom.vhd|
+!i113 1
+R6
+R7
+Abehavioral
+R1
+R2
+DEx4 work 11 non_rot_rom 0 22 N2XKlLj^Di8=YBM59C?n_1
+!i122 65
+l12
+L10 62
+Va58KVVIoUNn<n2@TnaZnD3
+!s100 BJVI>R9;2]kL[0gFMMalS2
+R3
+32
+R4
+!i10b 1
+R5
+R22
+R23
+!i113 1
+R6
+R7
+Erot_rom
+Z24 w1663927422
+R1
+R2
+!i122 66
+R0
+Z25 8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/rot_rom.vhd
+Z26 FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/rot_rom.vhd
+l0
+L4 1
+V9fQU;=Ni4n_i^9BRkI;QM2
+!s100 M^iY<K[mh3<a]>Rl@ea8X0
+R3
+32
+R4
+!i10b 1
+R5
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/rot_rom.vhd|
+Z28 !s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/src/rot_rom.vhd|
+!i113 1
+R6
+R7
+Abehavioral
+R1
+R2
+DEx4 work 7 rot_rom 0 22 9fQU;=Ni4n_i^9BRkI;QM2
+!i122 66
+l12
+L10 114
+V?X9JDKRo[zW=;zW8iElO[0
+!s100 1OFK7]`fRmh:e1SAI]YU60
+R3
+32
+R4
+!i10b 1
+R5
+R27
+R28
+!i113 1
+R6
+R7
+Etb_control_unit
+Z29 w1664807956
+Z30 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R14
+R1
+R2
+!i122 69
+R0
+Z31 8C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim/tb_control_unit.vhd
+Z32 FC:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim/tb_control_unit.vhd
+l0
+L8 1
+V_4^?Ql>I]fhD8l8UO3i6X3
+!s100 _m57n4^8<2Vg_4?NClGQ_2
+R3
+32
+Z33 !s110 1665487823
+!i10b 1
+R5
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim/tb_control_unit.vhd|
+!s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim/tb_control_unit.vhd|
+!i113 1
+R6
+R7
+Abehavioral
+R30
+R14
+R1
+R2
+Z35 DEx4 work 15 tb_control_unit 0 22 _4^?Ql>I]fhD8l8UO3i6X3
+!i122 69
+l49
+Z36 L12 200
+Z37 V4jATMeh=6Q0iUa6Ib@TYK0
+Z38 !s100 VYlI98ki`:VO3[V2XfH1R0
+R3
+32
+R33
+!i10b 1
+R5
+R34
+Z39 !s107 C:/Users/Loren/Desktop/Elle/Polito/Tesi_Computazione_Quantistica/quantum-circuit-emulator/design/control_unit/sim/tb_control_unit.vhd|
+!i113 1
+R6
+R7

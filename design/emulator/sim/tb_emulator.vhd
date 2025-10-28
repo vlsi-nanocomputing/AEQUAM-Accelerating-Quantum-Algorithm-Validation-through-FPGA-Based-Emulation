@@ -1,0 +1,266 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE STD.TEXTIO.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+
+ENTITY tb_emulator IS
+
+END ENTITY;
+
+ARCHITECTURE beh OF tb_emulator IS
+
+	COMPONENT EMULATOR_N_3_W_0_S_0_Q_2 IS
+		GENERIC( K : INTEGER := 20 );
+		PORT (
+			EMULATOR_N_3_W_0_S_0_Q_2_IN_FROM_MCU : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+			EMULATOR_N_3_W_0_S_0_Q_2_IN_CLK : IN STD_LOGIC;
+			EMULATOR_N_3_W_0_S_0_Q_2_IN_RSTN : IN STD_LOGIC;
+			EMULATOR_N_3_W_0_S_0_Q_2_OUT_TO_MCU : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+			EMULATOR_N_3_W_0_S_0_Q_2_IN_OUT_BUS : INOUT STD_LOGIC_VECTOR (K-1 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL RST : STD_LOGIC;
+	SIGNAL NSinCos : INTEGER := 0;
+	SIGNAL NState : INTEGER := 8;
+	SIGNAL SEND_DATA_DEL : STD_LOGIC := '0';
+	SIGNAL CLK_FPGA,START, SEND_DATA, CLK_MCU : STD_LOGIC;
+	SIGNAL TO_MCU, FROM_MCU: STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SIGNAL TO_INTERFACE : STD_LOGIC_VECTOR(19 DOWNTO 0) := (OTHERS => 'Z');
+	SIGNAL INTERFACE, INTERFACE_BUF : STD_LOGIC_VECTOR(19 DOWNTO 0):=(OTHERS => 'Z');
+
+	FILE TEST_FILE_INSTRUCTION, TEST_FILE_SINECOSINE, RES_FILE : TEXT;
+
+BEGIN
+
+	DUT : EMULATOR_N_3_W_0_S_0_Q_2  GENERIC MAP (20)
+									PORT MAP (
+										EMULATOR_N_3_W_0_S_0_Q_2_IN_FROM_MCU => FROM_MCU ,
+										EMULATOR_N_3_W_0_S_0_Q_2_IN_CLK => CLK_FPGA ,
+										EMULATOR_N_3_W_0_S_0_Q_2_IN_RSTN => RST,
+										EMULATOR_N_3_W_0_S_0_Q_2_OUT_TO_MCU => TO_MCU ,
+										EMULATOR_N_3_W_0_S_0_Q_2_IN_OUT_BUS => INTERFACE
+									);
+
+	CLK_GEN_MCU : PROCESS 
+	BEGIN
+	
+		CLK_MCU <= '1';
+		WAIT FOR 100 NS;
+		CLK_MCU <= '0';
+		WAIT FOR 100 NS;
+	
+	END PROCESS CLK_GEN_MCU;
+
+	CLK_GEN_FPGA : PROCESS 
+	BEGIN
+	
+		CLK_FPGA <= '1';
+		WAIT FOR 10 NS;
+		CLK_FPGA <= '0';
+		WAIT FOR 10 NS;
+	
+	END PROCESS CLK_GEN_FPGA;
+
+	RST <= '0', '1' AFTER 30 NS;
+
+	START <= '0', '1' AFTER 55 NS;
+
+
+
+	
+	DEL_DATA : PROCESS
+	BEGIN
+	
+		SEND_DATA_DEL <= '0';
+		WAIT FOR 2 NS;
+		SEND_DATA_DEL <= SEND_DATA;
+		WAIT FOR 8 NS;
+	END PROCESS DEL_DATA;
+
+	--INTERFACE_BUF <= TO_INTERFACE WHEN SEND_DATA_DEL = '1' ELSE (OTHERS => 'Z');
+	--INTERFACE <= INTERFACE_BUF;
+	INTERFACE <= TO_INTERFACE;
+	
+
+	READ_WRITE_FILE : PROCESS(START,TO_MCU)--(CLK_MCU)
+	VARIABLE PHASE,R_I : INTEGER :=0;
+	VARIABLE COUNT : INTEGER RANGE 0 TO 256;
+	VARIABLE TEST_LINE, RES_LINE : LINE;
+	variable SPACE : CHARACTER;
+	VARIABLE TEST_DATA : STD_LOGIC_VECTOR(19 DOWNTO 0);
+	VARIABLE TEST_DATA_INT: INTEGER;
+	BEGIN
+		TO_INTERFACE <= (OTHERS => 'Z');
+		SEND_DATA <= '0';
+	--IF RISING_EDGE(CLK_MCU) THEN
+		IF START = '1' THEN
+		
+			IF PHASE = 0 THEN
+			
+				FILE_OPEN(TEST_FILE_INSTRUCTION,"bell_state3_compiled.qasm",read_mode);
+				FILE_OPEN(TEST_FILE_SINECOSINE,"bell_state3_sincos.qasm",read_mode);
+				FILE_OPEN(RES_FILE,"res_file.txt",write_mode);
+				READLINE(TEST_FILE_INSTRUCTION,TEST_LINE);
+				READ(TEST_LINE,TEST_DATA);
+				
+				READLINE(TEST_FILE_SINECOSINE,TEST_LINE);
+				READ(TEST_LINE, TEST_DATA_INT);
+				
+				FROM_MCU <= "10";
+				PHASE := 1;
+				COUNT := 0;
+				
+			ELSIF PHASE = 1 AND TO_MCU(0)'EVENT THEN
+
+				IF TO_MCU(0) = '1' THEN
+					NState <= 2**to_integer(unsigned(TEST_DATA));
+					NSinCos <= TEST_DATA_INT;
+					FROM_MCU(0) <= '1';
+				ELSE
+					FROM_MCU(0) <= '0';
+					PHASE := 2;
+				END IF;
+				
+			ELSIF PHASE = 2 AND TO_MCU(0)'EVENT  THEN
+				IF TO_MCU(0) = '1' THEN
+					--NOT FROM_MCU(0);
+					TO_INTERFACE <= std_logic_vector(to_unsigned(NState, 20));
+					SEND_DATA <= '1';
+					IF NSinCos > 0 THEN
+						PHASE := 3;
+					ELSE
+						PHASE := 4;
+						FROM_MCU(1) <= '0';
+					END IF;
+					FROM_MCU(0) <= '1';
+					COUNT := 0;
+				ELSE
+					FROM_MCU(0) <= '0';
+				END IF;
+			
+			
+			ELSIF PHASE = 3 AND TO_MCU(0)'EVENT THEN
+				
+				IF COUNT < 2*NSinCos THEN
+					IF TO_MCU(0) = '1' THEN
+					
+						IF R_I = 0 THEN
+							R_I := 1;
+							READLINE(TEST_FILE_SINECOSINE,TEST_LINE);
+							READ(TEST_LINE,TEST_DATA);
+						ELSE 
+							R_I := 0;
+							READ(TEST_LINE,SPACE);
+							READ(TEST_LINE,TEST_DATA);
+						END IF;
+						
+						TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+						SEND_DATA <= '1';
+						FROM_MCU(0) <= '1';
+						
+						COUNT := COUNT + 1;
+					ELSE 
+						FROM_MCU(0) <= '0';
+						TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+					END IF;
+				
+				ELSE
+					SEND_DATA <= '1';				
+					FROM_MCU(1) <= '0';
+					FROM_MCU(0) <= '0';
+					COUNT := 0;
+					PHASE := 4;
+					TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+				
+				END IF;		
+		
+			ELSIF PHASE = 4 AND TO_MCU(0)'EVENT THEN
+			
+			
+				IF NOT ENDFILE(TEST_FILE_INSTRUCTION) THEN
+					IF TO_MCU(0) = '1' THEN
+						READLINE(TEST_FILE_INSTRUCTION,TEST_LINE);
+						READ(TEST_LINE,TEST_DATA);
+						TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+						SEND_DATA <= '1';
+						FROM_MCU(0) <= '1';
+					ELSE 
+						FROM_MCU(0) <= '0';
+						TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+					END IF;
+				ELSE 
+					PHASE := 5;
+					COUNT := 0;
+					FROM_MCU(0) <= '0'; --NOT FROM_MCU(0);
+					FROM_MCU(1) <= '1';
+					
+					--FROM_MCU <= "10";
+					TO_INTERFACE <= TEST_DATA(19 DOWNTO 0);
+						--R_I := 1;
+					
+						--WRITE(RES_LINE, TO_INTEGER(UNSIGNED(INTERFACE)));
+						--WRITE(RES_LINE, ' ');
+				
+				END IF;
+			
+			ELSIF PHASE = 5 AND TO_MCU(1)'EVENT THEN
+				IF FROM_MCU(0) = '1' OR COUNT > 0 THEN
+			
+					IF COUNT < 2*NState+1 THEN
+					
+						IF TO_MCU(0) = '0' THEN
+						
+							IF R_I = 0 THEN
+								R_I := 1;
+								WRITE(RES_LINE, INTERFACE);
+								WRITE(RES_LINE, ' ');
+
+							
+							ELSE 
+								R_I := 0;
+								WRITE(RES_LINE, INTERFACE);
+								WRITELINE(RES_FILE,RES_LINE);
+							END IF;
+							COUNT := COUNT + 1 ;
+							FROM_MCU(0) <= '1';
+						ELSE
+							FROM_MCU(0) <= '0';
+							IF COUNT = 2*NState THEN
+								PHASE := 6;
+							END IF;
+						END IF;
+					END IF;
+				ELSE
+					INTERFACE <= (OTHERS => 'Z');
+					FROM_MCU(0) <= '1';
+					COUNT := COUNT +1;
+				END IF;	
+				
+			ELSIF PHASE = 5 AND COUNT = 2*NState THEN
+				FROM_MCU(0) <= NOT FROM_MCU(0);
+				PHASE := 6;
+				
+			ELSIF PHASE = 6 THEN	
+				WRITE(RES_LINE, INTERFACE);
+				WRITELINE(RES_FILE,RES_LINE);
+				FILE_CLOSE(TEST_FILE_INSTRUCTION);
+				FILE_CLOSE(TEST_FILE_SINECOSINE);
+				FILE_CLOSE(RES_FILE);
+				COUNT := 0;
+				PHASE := 7;
+			END IF;
+				
+				--COUNT := COUNT + 1 
+		
+		ELSE 
+		
+			FROM_MCU <= "00";
+		
+		END IF;
+	--END IF;
+	
+	END PROCESS READ_WRITE_FILE;
+
+END beh;

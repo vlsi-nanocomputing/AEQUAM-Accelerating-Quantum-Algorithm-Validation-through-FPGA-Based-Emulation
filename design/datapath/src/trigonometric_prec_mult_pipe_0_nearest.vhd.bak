@@ -1,0 +1,396 @@
+USE WORK.DATAPATH;
+
+ARCHITECTURE trigonometric_prec_mult_pipe_0_nearest OF datapath IS
+
+	COMPONENT adder_subtractor IS
+		GENERIC ( K : INTEGER := 20);
+		PORT(
+			ADD_SUB_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			ADD_SUB_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			ADD_SUB_IN_SUB : IN STD_LOGIC;
+			ADD_SUB_OUT_RES : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplier IS 
+		GENERIC (K : INTEGER := 20);
+		PORT(
+			MULTIPLIER_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MULTIPLIER_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MULTIPLIER_OUT_RES : OUT STD_LOGIC_VECTOR (2*K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT n_bit_register IS
+		generic (n_bit: INTEGER);
+		port (REG_IN_DATA: IN STD_LOGIC_VECTOR(n_bit - 1 DOWNTO 0);
+				REG_IN_CLK, REG_IN_CLEAR, REG_IN_ENABLE: IN STD_LOGIC;
+				REG_OUT_DATA: OUT STD_LOGIC_VECTOR(n_bit - 1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplexer_5_1 IS
+		GENERIC (K : INTEGER := 20);
+		PORT (
+			MUX_5_1_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_5_1_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_5_1_IN_C : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_5_1_IN_D : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_5_1_IN_E : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_5_1_IN_SEL : IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+			MUX_5_1_OUT_RES : OUT STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplexer_4_1 IS
+		GENERIC (K : INTEGER := 20);
+		PORT (
+			MUX_4_1_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_4_1_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_4_1_IN_C : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_4_1_IN_D : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_4_1_IN_SEL : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+			MUX_4_1_OUT_RES : OUT STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplexer_3_1 IS
+		GENERIC (K : INTEGER := 20);
+		PORT (
+			MUX_3_1_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_3_1_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_3_1_IN_C : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_3_1_IN_SEL : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+			MUX_3_1_OUT_RES : OUT STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplexer_2_1 IS
+		GENERIC (K : INTEGER := 20);
+		PORT (
+			MUX_2_1_IN_A : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_2_1_IN_B : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_2_1_IN_SEL : IN STD_LOGIC;
+			MUX_2_1_OUT_RES : OUT STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	--Split input and output signals
+	SIGNAL IN_A_R, IN_A_I, IN_B_R, IN_B_I, OUT_A_R, OUT_A_I, OUT_B_R, OUT_B_I : STD_LOGIC_VECTOR(K-1 DOWNTO 0); 
+
+	--Input signals to the multipliers
+	SIGNAL TO_MULTIPLIER_1_A, TO_MULTIPLIER_1_B, TO_MULTIPLIER_2_A, TO_MULTIPLIER_2_B : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+	--Output signals of multipliers
+	SIGNAL FROM_MULTIPLIER_1, FROM_MULTIPLIER_2 : STD_LOGIC_VECTOR(2*K-1 DOWNTO 0);
+
+	--Rounding detection signals
+	SIGNAL ROUND_DET_1, ROUND_DET_2 : STD_LOGIC;
+
+	--Input signals to the adders/subtractors
+	SIGNAL TO_ADD_SUB_1_A, TO_ADD_SUB_1_B, TO_ADD_SUB_2_A, TO_ADD_SUB_2_B : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+	--Output signals of adders/subtractors
+	SIGNAL FROM_ADD_SUB_1, FROM_ADD_SUB_2 : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+	--Pipelined signals
+	SIGNAL PIPE_ROUND_DET_1, PIPE_ROUND_DET_2 : STD_LOGIC;
+	SIGNAL PIPE_ROUND_DET_1_EXPANDED, PIPE_ROUND_DET_2_EXPANDED : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+	SIGNAL PIPE_FEEDBACK_1, PIPE_FEEDBACK_2, PIPE_INTER, PIPE_ROUND_MULT_1, PIPE_ROUND_MULT_2 : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+	--Selected results
+	SIGNAL SEL_RES_A_R, SEL_RES_A_I, SEL_RES_B_R, SEL_RES_B_I : STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+
+	--Saved results
+	SIGNAL SAVED_A_R, SAVED_A_I, SAVED_B_R : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+	--Constants
+	SIGNAL INV_SQRT_2, ZERO : STD_LOGIC_VECTOR(K-1 DOWNTO 0);
+
+
+	--Configuration
+	FOR ALL: adder_subtractor USE ENTITY WORK.adder_subtractor(chosen);
+	FOR ALL: multiplier USE ENTITY WORK.multiplier(behavioral);
+	FOR ALL: n_bit_register USE ENTITY WORK.n_bit_register(beh);
+	FOR ALL: multiplexer_5_1 USE ENTITY WORK.multiplexer_5_1(behavioral);
+	FOR ALL: multiplexer_4_1 USE ENTITY WORK.multiplexer_4_1(behavioral);
+	FOR ALL: multiplexer_3_1 USE ENTITY WORK.multiplexer_3_1(behavioral);
+	FOR ALL: multiplexer_2_1 USE ENTITY WORK.multiplexer_2_1(behavioral);
+
+
+BEGIN
+	--Constants assignment
+	INV_SQRT_2 <= STD_LOGIC_VECTOR( TO_UNSIGNED(759250124,32) )(32 DOWNTO 32-K+1);
+	ZERO <= (OTHERS => '0');
+
+	--Split inputs and compact results
+	IN_A_R <= DATAPATH_IN_A (2*K-1 DOWNTO K);
+	IN_A_I <= DATAPATH_IN_A (K-1 DOWNTO 0);
+	IN_B_R <= DATAPATH_IN_B (2*K-1 DOWNTO 0);
+	IN_B_I <= DATAPATH_IN_B (K-1 DOWNTO 0);
+	
+	DATAPATH_OUT_A <= OUT_A_R & OUT_A_I;
+	DATAPATH_OUT_B <= OUT_B_R & OUT_B_I;
+
+	--Multiplier 1 multiplexers	
+	MUX_MULT_1_A : multiplexer_2_1 	GENERIC MAP (K => K)
+									PORT MAP (
+										MUX_2_1_IN_A => DATAPATH_IN_COSINE ,
+										MUX_2_1_IN_B =>  INV_SQRT_2,
+										MUX_2_1_IN_SEL =>  DATAPATH_IN_MUX_CTRL(6),
+										MUX_2_1_OUT_RES => TO_MULTIPLIER_1_A
+									);
+									
+	MUX_MULT_1_B : multiplexer_5_1 	GENERIC MAP (K => K)
+									PORT MAP (
+										MUX_5_1_IN_A =>  IN_A_R,
+										MUX_5_1_IN_B =>  IN_A_I,
+										MUX_5_1_IN_C =>  IN_B_R,
+										MUX_5_1_IN_D =>  IN_B_I,
+										MUX_5_1_IN_E =>  PIPE_FEEDBACK_1,
+										MUX_5_1_IN_SEL =>  DATAPATH_IN_MUX_CTRL(5 DOWNTO 3),
+										MUX_5_1_OUT_RES => TO_MULTIPLIER_1_B 
+									);
+									
+	--Multiplier 2 multiplexers
+	MUX_MULT_2_A : multiplexer_2_1 	GENERIC MAP (K => K)
+									PORT MAP (
+										MUX_2_1_IN_A => DATAPATH_IN_SINE ,
+										MUX_2_1_IN_B => INV_SQRT_2 ,
+										MUX_2_1_IN_SEL => DATAPATH_IN_MUX_CTRL(6) ,
+										MUX_2_1_OUT_RES => TO_MULTIPLIER_2_A
+									);
+
+	MUX_MULT_2_B : multiplexer_5_1 	GENERIC MAP (K => K)
+									PORT MAP (
+										MUX_5_1_IN_A => IN_A_R ,
+										MUX_5_1_IN_B => IN_A_I ,
+										MUX_5_1_IN_C => IN_B_R ,
+										MUX_5_1_IN_D => IN_B_I ,
+										MUX_5_1_IN_E => PIPE_FEEDBACK_2 ,
+										MUX_5_1_IN_SEL => DATAPATH_IN_MUX_CTRL(2 DOWNTO 0) ,
+										MUX_5_1_OUT_RES => TO_MULTIPLIER_2_B
+									);
+
+	--Multipliers
+	MULT_1 : multiplier GENERIC MAP (K => K)
+						PORT MAP (
+							MULTIPLIER_IN_A => TO_MULTIPLIER_1_A ,
+							MULTIPLIER_IN_B => TO_MULTIPLIER_1_B ,
+							MULTIPLIER_OUT_RES => FROM_MULTIPLIER_1
+						);
+						
+	MULT_2 : multiplier GENERIC MAP (K => K)
+						PORT MAP (
+							MULTIPLIER_IN_A => TO_MULTIPLIER_2_A ,
+							MULTIPLIER_IN_B => TO_MULTIPLIER_2_B ,
+							MULTIPLIER_OUT_RES => FROM_MULTIPLIER_2
+						);
+
+	--Rounding detection
+	ROUND_DET_1 <= FROM_MULTIPLIER_1(K-1);
+	
+	ROUND_DET_2 <= FROM_MULTIPLIER_2(K-1);
+	
+	--Rounding pipeline
+	REG_PIPE_DET_RND_1 : n_bit_register GENERIC MAP (1)
+								PORT MAP (
+									REG_IN_DATA => ROUND_DET_1 ,
+									REG_IN_ENABLE => DATAPATH_IN_PIPE(0) ,
+									REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+									REG_IN_CLK => DATAPATH_IN_CLK ,
+									REG_OUT_DATA => PIPE_RND_1
+								);
+
+	REG_PIPE_RND_DET_2 : n_bit_register GENERIC MAP (1)
+								PORT MAP (
+									REG_IN_DATA => ROUND_DET_2 ,
+									REG_IN_ENABLE => DATAPATH_IN_PIPE(0) ,
+									REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+									REG_IN_CLK => DATAPATH_IN_CLK ,
+									REG_OUT_DATA => PIPE_RND_2
+								);
+								
+	REG_PIPE_RND_MULT_1 : n_bit_register 	GENERIC MAP (K)
+											PORT MAP (
+												REG_IN_DATA => FROM_MULTIPLIER_1 (2*K-1 DOWNTO K) ,
+												REG_IN_ENABLE => DATAPATH_IN_PIPE(0) ,
+												REG_IN_CLEAR => DATAPATH_IN_CLEAR , 
+												REG_IN_CLK => DATAPATH_IN_CLK , 
+												REG_OUT_DATA => PIPE_ROUND_MULT_1
+											);
+
+	REG_PIPE_RND_MULT_2 : n_bit_register 	GENERIC MAP (K)
+											PORT MAP (
+												REG_IN_DATA => FROM_MULTIPLIER_2 (2*K-1 DOWNTO K) ,
+												REG_IN_ENABLE => DATAPATH_IN_PIPE(0) ,
+												REG_IN_CLEAR => DATAPATH_IN_CLEAR , 
+												REG_IN_CLK => DATAPATH_IN_CLK , 
+												REG_OUT_DATA => PIPE_ROUND_MULT_2
+											);
+
+	--Adder/subtractor 1 multiplexers
+	
+	PIPE_ROUND_DET_1_EXPANDED <= (OTHERS => '0') & PIPE_ROUND_DET_1
+	
+	MUX_ADD_SUB_1_A : multiplexer_5_1 	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_5_1_IN_A => ZERO ,
+											MUX_5_1_IN_B => PIPE_ROUND_DET_1_EXPANDED ,
+											MUX_5_1_IN_C => IN_B_I ,
+											MUX_5_1_IN_D => PIPE_FEEDBACK_1 ,
+											MUX_5_1_IN_E => IN_A_R ,
+											MUX_5_1_IN_SEL => DATAPATH_IN_MUX_CTRL (15 DOWNTO 13) ,
+											MUX_5_1_OUT_RES => TO_ADD_SUB_1_A 
+										);
+										
+	MUX_ADD_SUB_1_B : multiplexer_3_1	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_3_1_IN_A => IN_B_R ,
+											MUX_3_1_IN_B => PIPE_ROUND_MULT_1 ,
+											MUX_3_1_IN_C => PIPE_INTER ,
+											MUX_3_1_IN_SEL => DATAPATH_IN_MUX_CTRL (12 DOWNTO 11) ,
+											MUX_3_1_OUT_RES => TO_ADD_SUB_1_B
+										);
+	
+	--Adder/subtractor 2 multiplexers
+	
+	PIPE_ROUND_DET_2_EXPANDED <= (OTHERS => '0') & PIPE_ROUND_DET_2;
+	
+	MUX_ADD_SUB_2_A : multiplexer_4_1 	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_4_1_IN_A => ZERO ,
+											MUX_4_1_IN_B => PIPE_ROUND_DET_2_EXPANDED ,
+											MUX_4_1_IN_C => IN_B_R ,
+											MUX_4_1_IN_D => IN_A_I ,
+											MUX_4_1_IN_SEL => DATAPATH_IN_MUX_CTRL (10 DOWNTO 9) ,
+											MUX_4_1_OUT_RES => TO_ADD_SUB_2_A
+										);
+										
+	MUX_ADD_SUB_2_B : multiplexer_3_1 	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_3_1_IN_A => IN_A_I ,
+											MUX_3_1_IN_B => IN_B_I ,
+											MUX_3_1_IN_C => PIPE_ROUND_MULT_2 ,
+											MUX_3_1_IN_SEL => DATAPATH_IN_MUX_CTRL (8 DOWNTO 7) ,
+											MUX_3_1_OUT_RES => 
+										);
+	
+	--Adders/subtractors
+	ADD_SUB_1 : adder_subtractor 	GENERIC MAP (K => K)
+									PORT MAP (
+										ADD_SUB_IN_A => TO_ADD_SUB_1_A ,
+										ADD_SUB_IN_B => TO_ADD_SUB_1_B ,
+										ADD_SUB_IN_SUB => DATAPATH_IN_SUB(0) ,
+										ADD_SUB_OUT_RES => FROM_ADD_SUB_1
+									);
+									
+	ADD_SUB_2 : adder_subtractor	GENERIC MAP (K => K)
+									PORT MAP (
+										ADD_SUB_IN_A => TO_ADD_SUB_2_A  ,
+										ADD_SUB_IN_B => TO_ADD_SUB_2_B ,
+										ADD_SUB_IN_SUB => DATAPATH_IN_SUB(1) ,
+										ADD_SUB_OUT_RES => FROM_ADD_SUB_2
+									);
+
+	--Feedback pipeline
+	
+	REG_PIPE_FEEDBACK_1 : n_bit_register	GENERIC MAP (K)
+											PORT MAP (
+												REG_IN_DATA => FROM_ADD_SUB_1 ,
+												REG_IN_ENABLE => DATAPATH_IN_PIPE(1) ,
+												REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+												REG_IN_CLK => DATAPATH_IN_CLK ,
+												REG_OUT_DATA => PIPE_FEEDBACK_1
+											);
+
+	REG_PIPE_FEEDBACK_2 : n_bit_register	GENERIC MAP (K)
+											PORT MAP (
+												REG_IN_DATA => FROM_ADD_SUB_2 ,
+												REG_IN_ENABLE => DATAPATH_IN_PIPE(1) ,
+												REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+												REG_IN_CLK => DATAPATH_IN_CLK ,
+												REG_OUT_DATA => PIPE_FEEDBACK_2
+											);
+
+	--Inter-adder pipeline
+	
+	REG_PIPE_INTER : n_bit_register	GENERIC MAP (K)
+									PORT MAP (
+										REG_IN_DATA => FROM_ADD_SUB_2 ,
+										REG_IN_ENABLE => DATAPATH_IN_PIPE(2) ,
+										REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+										REG_IN_CLK => DATAPATH_IN_CLK ,
+										REG_OUT_DATA => PIPE_INTER
+									);
+
+	--Result selection multiplexers
+	
+	MUX_SEL_RES_A_R : multiplexer_3_1	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_3_1_IN_A => IN_B_I ,
+											MUX_3_1_IN_B => IN_B_R ,
+											MUX_3_1_IN_C => FROM_ADD_SUB_1 ,
+											MUX_3_1_IN_SEL => DATAPATH_IN_MUX_CTRL (17 DOWNTO 16) ,
+											MUX_3_1_OUT_RES => SEL_RES_A_R
+										);
+										
+	MUX_SEL_RES_A_I : multiplexer_3_1	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_3_1_IN_A => IN_B_I ,
+											MUX_3_1_IN_B => FROM_ADD_SUB_2 ,
+											MUX_3_1_IN_C => FROM_ADD_SUB_1 ,
+											MUX_3_1_IN_SEL => DATAPATH_IN_MUX_CTRL (19 DOWNTO 18) ,
+											MUX_3_1_OUT_RES => SEL_RES_A_I
+										);
+
+	MUX_SEL_RES_B_R : multiplexer_4_1 	GENERIC MAP (K= => K)
+										PORT MAP (
+											MUX_4_1_IN_A => IN_B_I ,
+											MUX_4_1_IN_B => FROM_ADD_SUB_2 ,
+											MUX_4_1_IN_C => FROM_ADD_SUB_1 ,
+											MUX_4_1_IN_D => IN_A_R ,
+											MUX_4_1_IN_SEL => DATAPATH_IN_MUX_CTRL (21 DOWNTO 20) ,
+											MUX_4_1_OUT_RES => SEL_RES_B_R
+										);
+	MUX_SEL_RES_B_I : multiplexer_5_1	GENERIC MAP (K => K)
+										PORT MAP (
+											MUX_5_1_IN_A => IN_A_I ,
+											MUX_5_1_IN_B => FROM_ADD_SUB_2 ,
+											MUX_5_1_IN_C => FROM_ADD_SUB_1 ,
+											MUX_5_1_IN_D => IN_A_R ,
+											MUX_5_1_IN_E => IN_B_R ,
+											MUX_5_1_IN_SEL => DATAPATH_IN_MUX_CTRL (24 DOWNTO 22) ,
+											MUX_5_1_OUT_RES => SEL_RES_B_I
+										);
+
+	--Result storage
+	
+	REG_SAVE_A_R : n_bit_register	GENERIC MAP (K)
+										PORT MAP (
+											REG_IN_DATA => SEL_RES_A_R ,
+											REG_IN_ENABLE => DATAPATH_IN_LD(0) ,
+											REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+											REG_IN_CLK => DATAPATH_IN_CLK ,
+											REG_OUT_DATA => SAVED_A_R
+										);
+
+	REG_SAVE_A_I : n_bit_register	GENERIC MAP (K)
+										PORT MAP (
+											REG_IN_DATA => SEL_RES_A_I ,
+											REG_IN_ENABLE => DATAPATH_IN_LD(1) ,
+											REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+											REG_IN_CLK => DATAPATH_IN_CLK ,
+											REG_OUT_DATA => SAVED_A_I
+										);
+										
+	REG_SAVE_B_R : n_bit_register	GENERIC MAP (K)
+										PORT MAP (
+											REG_IN_DATA => SEL_RES_B_R ,
+											REG_IN_ENABLE => DATAPATH_IN_LD(2) ,
+											REG_IN_CLEAR => DATAPATH_IN_CLEAR ,
+											REG_IN_CLK => DATAPATH_IN_CLK ,
+											REG_OUT_DATA => SAVED_B_R
+										);
+								
+	--Output selection multiplexer 
+	
+	MUX_OUT_A_I : multiplexer_2_1	GENERIC MAP (K => K)
+									PORT MAP (
+										MUX_2_1_IN_A =>
+									);
+										
+END trigonometric_prec_mult_pipe_0;

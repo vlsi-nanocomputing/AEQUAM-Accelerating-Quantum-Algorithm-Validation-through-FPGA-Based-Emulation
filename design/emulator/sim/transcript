@@ -1,0 +1,174 @@
+# do transcript.tcl 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity n_bit_register
+# -- Compiling architecture beh of n_bit_register
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity n_bit_register_clear_1
+# -- Compiling architecture beh of n_bit_register_clear_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity comb_adder
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading entity comb_adder
+# -- Loading package numeric_std
+# -- Compiling architecture behavioral of comb_adder
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_subtractor
+# -- Compiling architecture chosen of adder_subtractor
+# -- Loading entity comb_adder
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity counter
+# -- Compiling architecture behavioral of counter
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity state_decoder_n_8
+# -- Compiling architecture generated of state_decoder_n_8
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer_8_1
+# -- Compiling architecture behavioral of multiplexer_8_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer_2_1
+# -- Compiling architecture behavioral of multiplexer_2_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer_256_1
+# -- Compiling architecture behavioral of multiplexer_256_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer_256_1
+# -- Compiling architecture behavioral of multiplexer_256_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer_1_1
+# ** Warning: [3] ../../basic_blocks/multiplexers/src/multiplexer_1_1.vhd(7): (vcom-1246) Range -1 downto 0 is null.
+# -- Compiling architecture behavioral of multiplexer_1_1
+# ** Warning: ../../basic_blocks/multiplexers/src/multiplexer_1_1.vhd(16): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 0 is not equal to right length 1).
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplier
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading entity multiplier
+# -- Loading package numeric_std
+# -- Compiling architecture behavioral of multiplier
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity non_rot_rom
+# -- Compiling architecture behavioral of non_rot_rom
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rot_rom
+# -- Compiling architecture behavioral of rot_rom
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity control_unit
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading entity control_unit
+# -- Compiling architecture rom_based of control_unit
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading entity datapath
+# -- Loading package numeric_std
+# -- Compiling architecture trigonometric_prec_mult_pipe_0_nearest of datapath
+# -- Loading entity adder_subtractor
+# -- Loading entity multiplier
+# -- Loading entity n_bit_register
+# -- Loading entity multiplexer_5_1
+# -- Loading entity multiplexer_4_1
+# -- Loading entity multiplexer_3_1
+# -- Loading entity multiplexer_2_1
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity qep_n_8_w_0_s_0
+# -- Compiling architecture generated of qep_n_8_w_0_s_0
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity qpe_control
+# -- Compiling architecture state_machine of qpe_control
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity emulator_n_8_w_0_s_0_q_8
+# -- Compiling architecture generated of emulator_n_8_w_0_s_0_q_8
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity tb_emulator
+# -- Compiling architecture beh of tb_emulator
+# vsim -c work.tb_emulator 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tb_emulator(beh)
+# Loading work.emulator_n_8_w_0_s_0_q_8(generated)
+# Loading work.qpe_control(state_machine)
+# Loading work.n_bit_register(beh)
+# Loading work.counter(behavioral)
+# Loading work.multiplexer_256_1(behavioral)
+# Loading work.state_decoder_n_8(generated)
+# Loading work.qep_n_8_w_0_s_0(generated)
+# Loading work.n_bit_register_clear_1(beh)
+# Loading work.multiplexer_8_1(behavioral)
+# Loading work.control_unit(rom_based)
+# Loading work.multiplexer_2_1(behavioral)
+# Loading work.non_rot_rom(behavioral)
+# Loading work.rot_rom(behavioral)
+# Loading work.datapath(trigonometric_prec_mult_pipe_0_nearest)
+# Loading work.multiplexer_5_1(behavioral)
+# Loading work.multiplier(behavioral)
+# Loading work.multiplexer_3_1(behavioral)
+# Loading work.multiplexer_4_1(behavioral)
+# Loading work.adder_subtractor(chosen)
+# Loading work.comb_adder(behavioral)
+# ** Warning: Design size of 6804 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Fatal: (vsim-3421) Value 257 for count is out of range 0 to 256.
+#    Time: 21820 ns  Iteration: 3  Process: /tb_emulator/read_write_file File: ../../emulator/sim/tb.vhd
+# Fatal error in Process read_write_file at ../../emulator/sim/tb.vhd line 226
+# 
+# HDL call sequence:
+# Stopped at ../../emulator/sim/tb.vhd 226 Process read_write_file
+# 

@@ -1,0 +1,137 @@
+USE WORK.CONTROL_UNIT;
+
+ARCHITECTURE rom_based OF control_unit IS
+
+	COMPONENT non_rot_rom IS
+		PORT(
+			NON_ROT_ROM_IN_ADD : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			NON_ROT_ROM_OUT : OUT STD_LOGIC_VECTOR (40 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT rot_rom IS
+		PORT(
+			ROT_ROM_IN_ADD : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			ROT_ROM_OUT : OUT STD_LOGIC_VECTOR (41 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT multiplexer_2_1 IS
+		GENERIC (K : INTEGER := 20);
+		PORT (
+			MUX_2_1_IN_0 : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_2_1_IN_1 : IN STD_LOGIC_VECTOR (K-1 DOWNTO 0);
+			MUX_2_1_IN_SEL : IN STD_LOGIC;
+			MUX_2_1_OUT_RES : OUT STD_LOGIC_VECTOR (K-1 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT n_bit_register IS
+		generic (n_bit: INTEGER);
+		port (REG_IN_DATA: IN STD_LOGIC_VECTOR(n_bit - 1 DOWNTO 0);
+				REG_IN_CLK, REG_IN_CLEAR, REG_IN_ENABLE: IN STD_LOGIC;
+				REG_OUT_DATA: OUT STD_LOGIC_VECTOR(n_bit - 1 DOWNTO 0));
+	END COMPONENT;
+
+	--Flags
+	SIGNAL START_NON_ROT, START_ROT, UPDATE_NON_ROT, UPDATE_ROT : STD_LOGIC;
+
+	--Non rot ROM signals
+	SIGNAL TO_NON_ROT_ROM, NEXT_ADD_NON_ROT : STD_LOGIC_VECTOR (3 DOWNTO 0);
+	
+	SIGNAL FROM_NON_ROT_ROM : STD_LOGIC_VECTOR (40 DOWNTO 0);
+
+
+	--Rot ROM signals
+	SIGNAL TO_ROT_ROM, NEXT_ADD_ROT, START_ADD_ROT : STD_LOGIC_VECTOR (4 DOWNTO 0);
+	
+	SIGNAL FROM_ROT_ROM : STD_LOGIC_VECTOR (41 DOWNTO 0);
+	
+	--Output signals
+	SIGNAL OUT_SIG_BUS : STD_LOGIC_VECTOR (35 DOWNTO 0);
+
+BEGIN
+
+	--Flag generation
+
+	START_NON_ROT <= CONTROL_UNIT_IN_START AND ( NOT CONTROL_UNIT_IN_OPCODE(3) );
+	START_ROT <= CONTROL_UNIT_IN_START AND CONTROL_UNIT_IN_OPCODE(3);
+
+	UPDATE_NON_ROT <= ( NOT FROM_NON_ROT_ROM(40) ) AND ( NOT CONTROL_UNIT_IN_OPCODE(3) );
+	UPDATE_ROT <= ( NOT FROM_ROT_ROM(41) ) AND CONTROL_UNIT_IN_OPCODE(3);
+
+	--Next address multiplexers
+
+	START_ADD_ROT <= "00" & CONTROL_UNIT_IN_OPCODE(2 DOWNTO 0) ;
+	
+	MUX_NXT_ADD_NON_ROT : multiplexer_2_1 	GENERIC MAP (K => 4)
+											PORT MAP (
+												MUX_2_1_IN_0 => NEXT_ADD_NON_ROT ,
+												MUX_2_1_IN_1 => CONTROL_UNIT_IN_OPCODE ,
+												MUX_2_1_IN_SEL => START_NON_ROT ,
+												MUX_2_1_OUT_RES => TO_NON_ROT_ROM
+											);
+											
+	MUX_NXT_ADD_ROT : multiplexer_2_1		GENERIC MAP (K => 5)
+											PORT MAP (
+												MUX_2_1_IN_0 => NEXT_ADD_ROT ,
+												MUX_2_1_IN_1 => START_ADD_ROT ,
+												MUX_2_1_IN_SEL => START_ROT ,
+												MUX_2_1_OUT_RES => TO_ROT_ROM
+											);
+
+	--ROMs
+	
+	ROM_NON_ROT : non_rot_rom	PORT MAP (
+									NON_ROT_ROM_IN_ADD => TO_NON_ROT_ROM ,
+									NON_ROT_ROM_OUT => FROM_NON_ROT_ROM
+								);
+								
+	ROM_ROT : rot_rom			PORT MAP(
+									ROT_ROM_IN_ADD => TO_ROT_ROM ,
+									ROT_ROM_OUT => FROM_ROT_ROM
+								);
+								
+	--Next address registers
+	
+	REG_NEXT_ADD_NON_ROT : n_bit_register	GENERIC MAP (4)
+											PORT MAP (
+												REG_IN_DATA => FROM_NON_ROT_ROM (39 DOWNTO 36) ,
+												REG_IN_ENABLE => UPDATE_NON_ROT ,
+												REG_IN_CLEAR => CONTROL_UNIT_IN_CLEAR ,
+												REG_IN_CLK => CONTROL_UNIT_IN_CLK ,
+												REG_OUT_DATA => NEXT_ADD_NON_ROT
+											);
+											
+	REG_NEXT_ADD_ROT : n_bit_register 		GENERIC MAP (5)
+											PORT MAP (
+												REG_IN_DATA => FROM_ROT_ROM (40 DOWNTO 36) ,
+												REG_IN_ENABLE => UPDATE_ROT ,
+												REG_IN_CLEAR => CONTROL_UNIT_IN_CLEAR ,
+												REG_IN_CLK => CONTROL_UNIT_IN_CLK ,
+												REG_OUT_DATA => NEXT_ADD_ROT
+											);
+											
+	--Output control signals multiplexer
+	
+	MUX_OUT_CTRL : multiplexer_2_1	GENERIC MAP (K => 36)
+									PORT MAP (
+										MUX_2_1_IN_0 => FROM_NON_ROT_ROM (35 DOWNTO 0) ,
+										MUX_2_1_IN_1 => FROM_ROT_ROM (35 DOWNTO 0) ,
+										MUX_2_1_IN_SEL => CONTROL_UNIT_IN_OPCODE (3) ,
+										MUX_2_1_OUT_RES => OUT_SIG_BUS
+									);
+
+	--Final control unit output signals
+	
+	CONTROL_UNIT_OUT_PIPE <= OUT_SIG_BUS (35 DOWNTO 33);
+	CONTROL_UNIT_OUT_LD <= OUT_SIG_BUS (32 DOWNTO 30);
+	CONTROL_UNIT_OUT_MUX_CTRL <= OUT_SIG_BUS (29 DOWNTO 5);
+	CONTROL_UNIT_OUT_SUB <= OUT_SIG_BUS (4 DOWNTO 3);
+	CONTROL_UNIT_OUT_SAVED <= OUT_SIG_BUS (2 DOWNTO 0);
+	
+	CONTROL_UNIT_OUT_DONE <=	FROM_NON_ROT_ROM(40) 
+									WHEN CONTROL_UNIT_IN_OPCODE(3) = '0' ELSE
+								FROM_ROT_ROM(41)
+									WHEN CONTROL_UNIT_IN_OPCODE(3) = '1' ELSE
+								'0';
+
+
+END rom_based;

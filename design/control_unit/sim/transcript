@@ -1,0 +1,8 @@
+# Compile of arch_control_unit_rom_based.vhd was successful.
+# Compile of control_unit.vhd was successful.
+# Compile of non_rot_rom.vhd was successful.
+# Compile of rot_rom.vhd was successful.
+# Compile of n_bit_register.vhd was successful.
+# Compile of multiplexer_2_1.vhd was successful.
+# Compile of tb_control_unit.vhd was successful.
+# 7 compiles, 0 failed with no errors.

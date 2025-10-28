@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[9]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[10]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[11]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[12]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[13]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[14]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[15]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[16]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[17]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[18]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[19]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[20]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[28]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[29]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[30]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[31]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
